@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # made by kyungjik.min
+# this script need to sudo authorization.
 # ver 0.3
 
 echo "Step#1. install vim ..."
