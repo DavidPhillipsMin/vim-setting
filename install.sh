@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # made by kyungjik.min
-# ver 0.2
+# ver 0.3
 
 echo "Step#1. install vim ..."
 sudo apt-get install -y vim
