@@ -106,6 +106,12 @@ set csverb
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " dpmin: Jump tab
-map <F3> <c-w><c-w>
-nnoremap <F11> <C-t>
-nnoremap <F12> <C-]>
+map <F10> <c-w><c-w>
+nnoremap <F11> <c-t>
+nnoremap <F12> <c-]>
+
+" dpmin: search word
+map <F3> /<c-r><c-w><cr>
+map <F4> /<c-r><c-a><cr>
+" clear highlighting on return in normal mode
+nnoremap <cr> :noh<cr><cr>
