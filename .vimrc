@@ -81,6 +81,10 @@ let Tlist_Use_Right_Window=1
 " 태그 리스트 창의 폭을 65문자로 지정한다.
 let Tlist_WinWidth=65
 
+if filereadable("./tags")
+    set tags+=./tags
+endif
+
 " :Tilst
 map <F8> :Tlist<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
