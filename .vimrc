@@ -49,6 +49,7 @@ call vundle#begin()
     Plugin 'AutoComplPop'
     Plugin 'taglist.vim'
     Plugin 'Source-Explorer-srcexpl.vim'
+    Plugin 'OmniCppComplete'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -105,13 +106,26 @@ endif
 set csverb
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" OmniCppComplete 
+let OmniCpp_NamespaceSearch = 1 
+let OmniCpp_GlobalScopeSearch = 1 
+let OmniCpp_ShowAccess = 1 
+let OmniCpp_MayCompleteDot = 1 
+let OmniCpp_MayCompleteArrow = 1 
+let OmniCpp_MayCompleteScope = 1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" dpmin: save and retagging
+map <F2> :w<cr> :!ctags -R --c++-kinds=+pl --fields=+iaS --extra=+q .<cr><cr>
+
 " dpmin: Jump tab
 map <F10> <c-w><c-w>
+map <F5> <c-w><c-f>
 nnoremap <F11> <c-t>
 nnoremap <F12> <c-]>
 
 " dpmin: search word
-map <F3> /<c-r><c-w><cr>
+map <F3> *
 map <F4> /<c-r><c-a><cr>
 " clear highlighting on return in normal mode
 nnoremap <cr> :noh<cr><cr>
