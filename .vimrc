@@ -126,6 +126,7 @@ nnoremap <F12> <c-]>
 
 " dpmin: search word
 map <F3> *
+map <s-F3> #
 map <F4> /<c-r><c-a><cr>
 " clear highlighting on return in normal mode
 nnoremap <cr> :noh<cr><cr>
