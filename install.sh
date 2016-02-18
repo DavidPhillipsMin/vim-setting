@@ -2,7 +2,7 @@
 
 # made by kyungjik.min
 # this script need to sudo authorization.
-# ver 0.4
+# ver 0.5
 
 packages=("vim" "ctags" "cscope")
 
@@ -10,7 +10,7 @@ function install_pkgs {
     for (( i = 0 ; i < ${#packages[@]} ; i++ )) ; do
         echo "Install ${packages[$i]} package ($((i+1))/${#packages[@]}) ..."
 
-        result=$(dpkg -l | grep ${packages[$i]} | wc -l)
+        local result=$(dpkg -l | grep ${packages[$i]} | wc -l)
         if [ $result -eq 0 ]
         then
             sudo apt-get install -y ${packages[$i]} > /dev/null
