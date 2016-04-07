@@ -23,12 +23,18 @@ function install_pkgs {
 install_pkgs
 
 echo "Step#1. Install vim Vundle plugin ..."
-bundle_dir=".vim/bundle"
-if [ ! -d ~/$bundle_dir ] 
+vimsetting_dir=".vim"
+bundle_dir="${vimsetting_dir}/bundle"
+if [ ! -d ~/$vimsetting_dir ]
+then
+    mkdir ~/$vimsetting_dir
+    mkdir ~/$bundle_dir
+elif [ ! -d ~/$bundle_dir ] 
 then
     mkdir ~/$bundle_dir
 fi
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim > /dev/null
+
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim > /dev/null 2> /dev/null
 sleep 0.5
 
 echo "Step#2. Install other vim plugins ..."
