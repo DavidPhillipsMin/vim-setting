@@ -46,10 +46,9 @@ call vundle#begin()
 
     Plugin 'molokai'
     Plugin 'The-NERD-tree'
-    Plugin 'AutoComplPop'
     Plugin 'taglist.vim'
     Plugin 'Source-Explorer-srcexpl.vim'
-    Plugin 'OmniCppComplete'
+    Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
