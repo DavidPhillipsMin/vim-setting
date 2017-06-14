@@ -93,6 +93,12 @@ map <F8> :Tlist<cr>
 map <F7> :NERDTreeToggle<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" for compile with gcc
+set makeprg=g++\ -o\ %<\ %
+map <c-b> :w<cr> :make<cr>
+map <c-r> :!./%<<cr>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" for cscope
 set csprg=/usr/bin/cscope
 set csto=0
@@ -103,15 +109,6 @@ if filereadable("./cscope.out")
     cs add cscope.out
 endif
 set csverb
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" OmniCppComplete 
-let OmniCpp_NamespaceSearch = 1 
-let OmniCpp_GlobalScopeSearch = 1 
-let OmniCpp_ShowAccess = 1 
-let OmniCpp_MayCompleteDot = 1 
-let OmniCpp_MayCompleteArrow = 1 
-let OmniCpp_MayCompleteScope = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " dpmin: save and retagging
