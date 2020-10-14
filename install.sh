@@ -2,9 +2,9 @@
 
 # made by kyungjik.min
 # this script need to sudo authorization.
-# ver 0.5
+# ver 0.6
 
-packages=("vim" "ctags" "cscope" "cmake" "build-essential" "python-dev" "python3-dev")
+packages=("vim" "ctags" "cscope" "cmake" "build-essential" "python-dev" "python3-dev" "tmux")
 
 function install_pkgs {
     for (( i = 0 ; i < ${#packages[@]} ; i++ )) ; do
@@ -35,19 +35,27 @@ fi
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim > /dev/null 2> /dev/null
 sleep 0.5
 
+echo "Step#0. copy bashrc ..."
+cp .bashrc ~/.bashrc
+sleep 0.5
+
 echo "Step#1. copy vimrc ..."
 cp .vimrc ~/.vimrc
 sleep 0.5
 
-echo "Step#2. copy mkcscope ..."
+echo "Step#2. copy tmux.conf ..."
+cp .tmux.conf ~/.tmux.conf
+sleep 0.5
+
+echo "Step#3. copy mkcscope ..."
 cp mkcscope.sh /usr/bin/
 sleep 0.5
 
-echo "Step#3. install other vim plugins ..."
+echo "Step#4. install other vim plugins ..."
 vim +PluginInstall +qall
 sleep 0.5
 
-echo "Step#4. update youcompleteme plugin ..."
+echo "Step#5. update youcompleteme plugin ..."
 ~/.vim/bundle/YouCompleteMe/install.py --clang-completer
 sleep 0.5
 

@@ -47,7 +47,6 @@ call vundle#begin()
     Plugin 'molokai'
     Plugin 'The-NERD-tree'
     Plugin 'taglist.vim'
-    Plugin 'Source-Explorer-srcexpl.vim'
     Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()            " required
