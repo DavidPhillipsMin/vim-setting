@@ -2,9 +2,9 @@
 
 # made by kyungjik.min
 # this script need to sudo authorization.
-# ver 0.6
+# ver 0.7
 
-packages=("vim" "ctags" "cscope" "cmake" "build-essential" "python-dev" "python3-dev" "tmux")
+packages=("vim" "ctags" "cscope" "cmake" "build-essential" "python-dev" "python3-dev" "tmux" "tmux-plugin-manager")
 
 function install_pkgs {
     for (( i = 0 ; i < ${#packages[@]} ; i++ )) ; do
@@ -12,7 +12,7 @@ function install_pkgs {
 
         local result=$(dpkg -l ${packages[$i]} | grep ${packages[$i]} | wc -l)
         if [ $result != 1 ] ; then
-            apt-get install -y ${packages[$i]} > /dev/null
+            apt install -y ${packages[$i]} > /dev/null
         fi
 
         sleep 0.5
