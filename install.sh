@@ -2,9 +2,9 @@
 
 # made by kyungjik.min
 # this script need to sudo authorization.
-# ver 0.7
+# ver 0.8
 
-packages=("vim" "ctags" "cscope" "cmake" "build-essential" "python-dev" "python3-dev" "tmux" "tmux-plugin-manager")
+packages=("vim" "ctags" "cscope" "cmake" "build-essential" "python-dev" "python3-dev" "tmux" "tmux-plugin-manager" "git" "htop")
 
 function install_pkgs {
     for (( i = 0 ; i < ${#packages[@]} ; i++ )) ; do
